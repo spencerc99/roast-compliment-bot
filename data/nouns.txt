@@ -1,0 +1,42 @@
+right arm
+left arm
+leg
+hand
+foot
+thigh
+calf
+nostril
+bicep
+tricep
+eyebrow
+eye
+toe
+pinky
+index finger
+ring finger
+thumb
+middle finger
+knuckle
+wrist
+ankle
+elbow
+knee
+pectoral
+molar
+collarbone
+spine
+chest
+tongue
+tooth
+mouth
+hair
+Coffeehouse beverage choice
+residential college
+sense of style
+sense of humor
+sense of taste
+self-awareness
+ego
+id
+personality
+hometown

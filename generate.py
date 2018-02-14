@@ -1,4 +1,5 @@
 import random
+from heartsemail import sendMail
 
 with open('./data/nouns.txt', 'r') as f:
     nouns = [line.strip() for line in f.readlines()]
@@ -52,6 +53,7 @@ def generate_roast():
         curr_nouns[2]
     )
 
-for i in range(2):
-    print (generate_compliment())
-    print (generate_roast())
+for i in range(1):
+    sendMail("sc73@rice.edu", "Test Mail Compliment", generate_compliment())
+    sendMail("sc73@rice.edu", "Test Mail Roast", generate_roast())
+

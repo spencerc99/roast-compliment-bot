@@ -53,7 +53,11 @@ def generate_roast():
         curr_nouns[2]
     )
 
-for i in range(1):
-    sendMail("sc73@rice.edu", "Test Mail Compliment", generate_compliment())
-    sendMail("sc73@rice.edu", "Test Mail Roast", generate_roast())
+FIRE = "\U0001F525"
+HEART = "\U00002764"
+SUBJECT = HEART + "Someone saved a heart to send you one!" + HEART
 
+for i in range(1):
+    # sendMail("nu4@rice.edu", SUBJECT, generate_compliment(), "Spencer", "Napas")
+    sendMail("sc73@rice.edu", SUBJECT, generate_compliment(), "Spencer", "Raymond")
+    # sendMail("sc73@rice.edu", SUBJECT+FIRE, generate_roast(), "Spencer", "Recipient")

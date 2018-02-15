@@ -1,8 +1,4 @@
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-
-template = """
+<!DOCTYPE html>
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc;">
   <tr>
     <td bgcolor="#ee4c50" style="padding: 40px 10px 30px 10px;" align="center">
@@ -19,7 +15,7 @@ template = """
                   <p style="font-family: cursive">Dear {},</p>
                   <p style="font-family: cursive" id="message">{}</p>
                   <p style="font-family: cursive">Love,</p>
-                  <p style="font-family: cursive">{} & Roast4Hearts</p>
+                  <p style="font-family: cursive">{} & <a href="https://www.facebook.com/events/1229340043867148/">Roast4Hearts</a></p>
                 </td>
               </tr>
             </table>
@@ -35,21 +31,3 @@ template = """
     </td>
   </tr>
 </table>
-"""
-
-
-def sendMail(address, subject, message, sender_name, recipient_name):
-	msg = MIMEMultipart()
-	fromaddr = "roasts4hearts@gmail.com"
-	msg['From'] = fromaddr
-	msg['To'] = address
-	msg['Subject'] = subject
-
-	msg.attach(MIMEText(template.format(recipient_name, message, sender_name), 'html'))
-
-	server = smtplib.SMTP('smtp.gmail.com', 587)
-	server.starttls()
-	server.login(fromaddr, "GumballChallenge")
-	text = msg.as_string()
-	server.sendmail(fromaddr, address, text)
-	server.quit()
